@@ -2,11 +2,10 @@ package org.example;
 
 import com.sun.istack.NotNull;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.mapping.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
+
 @Entity
 public class Pessoa {
     @NotNull
@@ -17,6 +16,12 @@ public class Pessoa {
     private int telefone_celular;
     @NotNull
     private String endereco;
+
+
+    @ManyToMany
+    @JoinTable(name = "usuario_has_endereco", joinColumns = { @JoinColumn(name = "usuario_id") }, inverseJoinColumns = {
+            @JoinColumn(name = "endereco_id") })
+    private Endereco[] enderecos;
 
 
     public Pessoa() {
