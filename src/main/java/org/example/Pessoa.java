@@ -17,19 +17,23 @@ public class Pessoa {
 
 
 
-
-
-    public Pessoa() {
-        //O Hibernate necessita de um construtor sem parametros
-    }
-
-
-    public Pessoa(String cpf, String nome) {
+    public Pessoa(String cpf, String nome, int telefone_celular) {
         super();
         this.cpf = cpf;
         this.nome = nome;
+        this.telefone_celular = telefone_celular;
     }
 
+    public Pessoa() {
+    }
+
+
+    public int getTelefone_celular() {
+        return telefone_celular;
+    }
+    public void setTelefone_celular(int telefone_celular) {
+        this.telefone_celular = telefone_celular;
+    }
     public String getCpf() {
         return cpf;
     }

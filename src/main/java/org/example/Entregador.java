@@ -11,4 +11,8 @@ public class Entregador extends Funcionario{
     private float horas;
     @NotNull
     private float salario_hora;
+
+    public Entregador(String cpf, String nome) {
+        super(cpf, nome);
+    }
 }

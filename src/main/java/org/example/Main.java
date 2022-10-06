@@ -15,7 +15,6 @@ public class Main {
 
 
         session.beginTransaction();
-        session.save( new Pessoa("09829992809", "Raphael"));
 //        session.save( new Pessoa("64783763565", "Alana"));
 
         session.getTransaction().commit();

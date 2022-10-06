@@ -1,8 +1,8 @@
 package org.example;
 
-import javax.persistence.OneToMany;
+import java.util.List;
 
 public class Cardapio {
 
-    private ItemComer[] itemCardapio;
+    private List<ItemComer> itemCardapio;
 }
