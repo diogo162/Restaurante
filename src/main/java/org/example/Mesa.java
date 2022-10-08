@@ -9,6 +9,7 @@ public class Mesa {
     @NotNull
     private int id_mesa;
     private Pedido order;
-    @NotNull
-    private boolean status;
+    private enum status{
+        livre, ocupada
+    };
 }

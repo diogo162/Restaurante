@@ -1,8 +1,6 @@
 package org.example;
 
 import com.sun.istack.NotNull;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.mapping.List;
 
 import javax.persistence.*;
 
@@ -18,10 +16,7 @@ public class Pessoa {
     private String endereco;
 
 
-    @ManyToMany
-    @JoinTable(name = "usuario_has_endereco", joinColumns = { @JoinColumn(name = "usuario_id") }, inverseJoinColumns = {
-            @JoinColumn(name = "endereco_id") })
-    private Endereco[] enderecos;
+
 
 
     public Pessoa() {
