@@ -15,7 +15,7 @@ public class Main {
 
 
         session.beginTransaction();
-//        session.save( new Pessoa("64783763565", "Alana"));
+        session.save( new Pessoa("64783763565", "Alana"));
 
         session.getTransaction().commit();
 
@@ -33,12 +33,12 @@ public class Main {
             System.out.println( pessoa.getCpf() + " - " + pessoa.getCpf() + " - " + pessoa.getNome());
         }
 
-//        System.out.println("------- DELETE");
-//        session.beginTransaction();
-//        query = session.createQuery( "DELETE from Pessoa p where p.cpf = :cpf" );
-//        query.setParameter("cpf","09829992809");
-//        query.executeUpdate();
-//        session.getTransaction().commit();
+        System.out.println("------- DELETE");
+        session.beginTransaction();
+        query = session.createQuery( "DELETE from Pessoa p where p.cpf = :cpf" );
+        query.setParameter("cpf","09829992809");
+        query.executeUpdate();
+        session.getTransaction().commit();
 
 
         session.close();

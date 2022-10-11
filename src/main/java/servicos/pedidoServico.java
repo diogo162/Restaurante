@@ -1,6 +1,8 @@
 package servicos;
 
-public class pedidoServico {
+import org.hibernate.service.Service;
+
+public interface pedidoServico{
 
 
 
