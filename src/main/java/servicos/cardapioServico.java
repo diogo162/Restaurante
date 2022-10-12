@@ -1,6 +1,6 @@
 package servicos;
 
-public class cardapioServico {
+public interface cardapioServico {
 
 
 }

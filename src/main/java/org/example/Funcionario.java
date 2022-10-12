@@ -11,4 +11,8 @@ public class Funcionario extends Pessoa{
     public Funcionario(String cpf, String nome) {
         super(cpf, nome);
     }
+
+    public Funcionario() {
+
+    }
 }

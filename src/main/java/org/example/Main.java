@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.List;
+import java.util.Scanner;
 
 import javax.persistence.Query;
 import org.hibernate.Session;
@@ -12,35 +13,17 @@ public class Main {
         HibernateUtil hu = new HibernateUtil();
         SessionFactory sessionFactory = hu.getSessionFactory();
         Session session = sessionFactory.openSession();
+        Scanner senha = new Scanner(System.in);
 
+        System.out.println("Bem-vindo, digite sua senha");
+        String gerenteSenha = senha.nextLine();
 
-        session.beginTransaction();
-        session.save( new Pessoa("64783763565", "Alana"));
-
-        session.getTransaction().commit();
-
-        //busca todos os dados na base
-        List result = session.createQuery( "from Pessoa" ).list();
-        for ( Pessoa pessoa : (List<Pessoa>) result ) {
-            System.out.println( pessoa.getCpf() + " - " + pessoa.getCpf() + " - " + pessoa.getNome());
+        if(gerenteSenha == "true"){
+            return;
         }
-
-        System.out.println("------- com WHERE");
-        Query query = session.createQuery( "from Pessoa p where p.cpf = :cpf" );
-        query.setParameter("cpf","09829992809");
-        result = query.getResultList();
-        for ( Pessoa pessoa : (List<Pessoa>) result ) {
-            System.out.println( pessoa.getCpf() + " - " + pessoa.getCpf() + " - " + pessoa.getNome());
+        else{
+            System.out.println("senha incorreta");
         }
-
-        System.out.println("------- DELETE");
-        session.beginTransaction();
-        query = session.createQuery( "DELETE from Pessoa p where p.cpf = :cpf" );
-        query.setParameter("cpf","09829992809");
-        query.executeUpdate();
-        session.getTransaction().commit();
-
-
         session.close();
         sessionFactory.close();
     }

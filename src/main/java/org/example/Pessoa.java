@@ -27,6 +27,9 @@ public class Pessoa {
     public Pessoa() {
     }
 
+    public Pessoa(String cpf, String nome) {
+    }
+
 
     public int getTelefone_celular() {
         return telefone_celular;
