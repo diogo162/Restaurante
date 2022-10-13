@@ -2,6 +2,10 @@ package org.example;
 
 import com.sun.istack.NotNull;
 
+import javax.persistence.Entity;
+
+
+@Entity
 public class Entregador extends Funcionario{
     @NotNull
     private int CNH;
@@ -14,5 +18,9 @@ public class Entregador extends Funcionario{
 
     public Entregador(String cpf, String nome) {
         super(cpf, nome);
+    }
+
+    public Entregador() {
+
     }
 }

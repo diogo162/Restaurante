@@ -2,6 +2,9 @@ package org.example;
 
 import com.sun.istack.NotNull;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Funcionario extends Pessoa{
     @NotNull
     private String cargo;

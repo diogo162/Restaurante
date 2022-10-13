@@ -19,12 +19,15 @@ public class Main {
         String gerenteSenha = senha.nextLine();
 
         if(gerenteSenha == "true"){
-            return;
+            logar();
         }
         else{
             System.out.println("senha incorreta");
         }
         session.close();
         sessionFactory.close();
+    }
+
+    private static void logar() {
     }
 }

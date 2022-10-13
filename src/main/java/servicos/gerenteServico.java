@@ -2,6 +2,10 @@ package servicos;
 
 public interface gerenteServico {
     void criarGerente(String cpf, String nome, int telefone_celular, String senha);
-    void trocarSenha();
-    void deletarGerente();
+
+    void trocarSenha(String cpf, String senha);
+
+    void deletarGerente(String cpf, String nome, int telefone_celular);
+
+    void logar();
 }
