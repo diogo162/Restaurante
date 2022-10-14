@@ -1,5 +1,4 @@
-package servicos;
-
+package org.servicos;
 import org.example.Cliente;
 
 public interface clienteServico {

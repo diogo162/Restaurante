@@ -1,6 +1,7 @@
-package servicos;
+package org.servicos;
 
 import org.example.Cliente;
+import org.example.Pedido;
 import org.hibernate.service.Service;
 
 public interface pedidoServico{
@@ -10,5 +11,5 @@ public interface pedidoServico{
 
     void listarPedidos();
 
-    void deletarPedido(Cliente cliente, String cpf, String nome, int telefone_celular);
+    void deletarPedido(Pedido pedido, String cpf, String nome, int telefone_celular);
 }

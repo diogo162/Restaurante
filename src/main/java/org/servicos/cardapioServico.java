@@ -1,4 +1,4 @@
-package servicos;
+package org.servicos;
 
 public interface cardapioServico {
 

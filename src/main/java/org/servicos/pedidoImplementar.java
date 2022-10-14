@@ -1,7 +1,6 @@
-package servicos;
+package org.servicos;
 
 
-import org.example.Cliente;
 import org.example.HibernateUtil;
 import org.example.Pedido;
 import org.hibernate.Session;
@@ -38,11 +37,11 @@ public class pedidoImplementar implements pedidoServico {
 
 
     @Override
-    public void deletarPedido(Cliente cliente, String cpf, String nome, int telefone_celular) {
+    public void deletarPedido(Pedido id_pedido, String cpf, String nome, int telefone_celular) {
         System.out.println("------- DELETE");
         session.beginTransaction();
-        Query query = session.createQuery("DELETE from Pedido p where p.Cliente = :Cliente");
-        query.setParameter("Cliente", cliente);
+        Query query = session.createQuery("DELETE from Pedido p where p.id_pedido = :id_pedido");
+        query.setParameter("id_pedido", id_pedido);
         query.executeUpdate();
         session.getTransaction().commit();
         System.out.println("cliente deletado com sucesso");

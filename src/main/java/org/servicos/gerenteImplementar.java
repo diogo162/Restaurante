@@ -1,13 +1,11 @@
-package servicos;
+package org.servicos;
 
-import org.example.Gerente;
-import org.example.HibernateUtil;
-import org.example.Mesa;
-import org.example.Pessoa;
+import org.example.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,7 +25,23 @@ public class gerenteImplementar implements gerenteServico{
 
     @Override
     public void trocarSenha(String cpf, String senha) {
+        session.beginTransaction();
+        System.out.println("digite seu CPF");
+        Scanner scanner = new Scanner(System.in);
+        cpf = scanner.nextLine();
+        Gerente gerente = (Gerente) session.get( Gerente.class, (Serializable) new Gerente());
+        gerente.setSenha(senha);
+        session.save(gerente);
+    }
 
+    @Override
+    public void listarFuncionarios()
+    {
+        //busca todos os funcionários registrados na base
+        List result = session.createQuery( "from Funcionario" ).list();
+        for ( Funcionario funcionario : (List<Funcionario>) result ) {
+            System.out.println( funcionario.getCpf() + " - " + funcionario.getNome() + " - " + funcionario.getTelefone_celular());
+        }
     }
 
 

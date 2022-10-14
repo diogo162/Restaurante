@@ -1,4 +1,4 @@
-package servicos;
+package org.servicos;
 
 import org.example.Cliente;
 import org.example.HibernateUtil;
@@ -6,10 +6,9 @@ import org.example.Pessoa;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-
 import java.util.List;
 
-public class ClienteImplementar implements clienteServico {
+public class clienteImplementar implements clienteServico {
 
 
     HibernateUtil hu = new HibernateUtil();

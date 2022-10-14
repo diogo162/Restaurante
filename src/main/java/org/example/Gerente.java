@@ -25,4 +25,12 @@ public class Gerente extends Funcionario{
             return false;
         }
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }
