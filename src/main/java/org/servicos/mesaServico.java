@@ -4,6 +4,7 @@ public interface mesaServico {
     void fecharMesa();
 
     void listarMesas();
+
     void abrirMesa();
 
 }

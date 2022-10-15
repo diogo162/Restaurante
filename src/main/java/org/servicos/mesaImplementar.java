@@ -15,8 +15,14 @@ public class mesaImplementar {
 
 
 
-    public void abrirMesa(){
-
+    public void abrirMesa(int id){
+        List<Mesa> mesa = (List<Mesa>) session.createQuery("from Mesa").list();
+        for(Mesa mes : mesa){
+            if (id == mes.getId_mesa()){
+                mes.setStatus("aberta");
+                System.out.println(mes.getStatus());
+            }
+        }
     }
 
     public void listarMesas(){
@@ -27,7 +33,13 @@ public class mesaImplementar {
         }
 
     }
-    public void fecharMesa(){
-
+    public void fecharMesa(int id){
+        List<Mesa> mesa = (List<Mesa>) session.createQuery("from Mesa").list();
+        for(Mesa mes : mesa){
+            if (id == mes.getId_mesa()){
+                mes.setStatus("fechada");
+                System.out.println(mes.getStatus());
+            }
+        }
     }
 }

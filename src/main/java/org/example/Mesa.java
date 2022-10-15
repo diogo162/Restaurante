@@ -12,10 +12,12 @@ public class Mesa {
     @Id
     @NotNull
     private int id_mesa;
-
     @ManyToOne
     @JoinColumn(name = "order_id_pedido")
     private Pedido order;
+
+
+
     private String status;
 
 
@@ -33,6 +35,10 @@ public class Mesa {
 
     public void setId_mesa(int id_mesa) {
         this.id_mesa = id_mesa;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getStatus(){
