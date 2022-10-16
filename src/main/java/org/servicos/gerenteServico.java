@@ -10,5 +10,7 @@ public interface gerenteServico {
 
     void listarFuncionarios();
 
+    void verificarSenha(String senha);
+
     void logar();
 }

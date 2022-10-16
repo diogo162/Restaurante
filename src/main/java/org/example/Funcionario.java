@@ -10,12 +10,11 @@ public class Funcionario extends Pessoa{
     private String cargo;
     private float salario;
 
-
     public Funcionario(String cpf, String nome) {
         super(cpf, nome);
     }
 
     public Funcionario() {
-
+        super();
     }
 }

@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 
 import java.util.List;
 
-public class mesaImplementar {
+public class mesaImplementar implements mesaServico{
 
     HibernateUtil hu = new HibernateUtil();
     SessionFactory sessionFactory = hu.getSessionFactory();
@@ -25,6 +25,7 @@ public class mesaImplementar {
         }
     }
 
+    @Override
     public void listarMesas(){
         System.out.println("Mesas");
         List result = session.createQuery( "from Mesa" ).list();
@@ -33,6 +34,14 @@ public class mesaImplementar {
         }
 
     }
+
+    @Override
+    public void listarMesasDelivery() {
+
+    }
+
+
+    @Override
     public void fecharMesa(int id){
         List<Mesa> mesa = (List<Mesa>) session.createQuery("from Mesa").list();
         for(Mesa mes : mesa){

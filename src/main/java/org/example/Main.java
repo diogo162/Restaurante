@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.servicos.*;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -16,15 +17,13 @@ public class Main {
         Scanner senha = new Scanner(System.in);
 
 
-
-        Gerente.criarGerente("123456", "Marcelo", 819823448, "1523");
-
+//        Gerente.criarGerente("123456", "Marcelo", 819823448, "1523");
         System.out.println("Bem-vindo, digite sua senha");
-
         String gerenteSenha = senha.nextLine();
-
-        if(gerenteSenha == "true"){
+        Gerente.verificarSenha(gerenteSenha);
+        if(Objects.equals(gerenteSenha, "123")){
             Gerente.logar();
+
         }
         else{
             System.out.println("senha incorreta, tente novamente");

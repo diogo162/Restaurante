@@ -2,31 +2,37 @@ package org.example;
 
 import com.sun.istack.NotNull;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Pedido {
     @Id
     @NotNull
     private int id_pedido;
-    @NotNull
-    private ItemPedido[] itens;
+
+    private List<ItemPedido> itens;
     @NotNull
     private float valor;
+
+
+    @OneToOne
+    @JoinColumn(name = "cliente_id_cliente")
     private Cliente cliente;
     @NotNull
     private LocalDate dataPedido;
     @NotNull
     private String tipo;
+    @OneToOne
+    @JoinColumn(name = "mesa_id_mesa")
     private Mesa mesa;
 
-    public ItemPedido[] getItens() {
+    public List<ItemPedido> getItens() {
         return itens;
     }
 
-    public void setItens(ItemPedido[] itens) {
+    public void setItens(List<ItemPedido> itens) {
         this.itens = itens;
     }
 

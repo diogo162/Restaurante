@@ -1,10 +1,12 @@
 package org.servicos;
 
 public interface mesaServico {
-    void fecharMesa();
 
     void listarMesas();
 
-    void abrirMesa();
+    void listarMesasDelivery();
 
+    void abrirMesa(int id);
+
+    void fecharMesa(int id);
 }

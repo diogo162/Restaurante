@@ -14,7 +14,7 @@ public class gerenteImplementar implements gerenteServico{
     HibernateUtil hu = new HibernateUtil();
     SessionFactory sessionFactory = hu.getSessionFactory();
     Session session = sessionFactory.openSession();
-
+    mesaServico mesa = new mesaImplementar();
 
     @Override
     public void criarGerente(String cpf, String nome, int telefone_celular, String senha){
@@ -58,6 +58,15 @@ public class gerenteImplementar implements gerenteServico{
     }
 
     @Override
+    public void verificarSenha(String senha){
+        System.out.println("------- DELETE");
+        session.beginTransaction();
+        Query query = session.createQuery("SELECT senha from Gerente p where p.senha = :senha");
+        session.getTransaction().commit();
+        System.out.println("login realizado com sucesso");
+    }
+
+    @Override
     public void logar() {
         Scanner leitor = new Scanner(System.in);
 
@@ -66,19 +75,18 @@ public class gerenteImplementar implements gerenteServico{
         switch(escolha){
             case(1):
                 System.out.println("Mesas");
-                List result = session.createQuery( "from Mesa" ).list();
-                for ( Mesa mesa : (List<Mesa>) result ) {
-                    System.out.println( mesa.getId_mesa() + " - " + mesa.getOrder() + " - " + mesa.getStatus());
-                }
+                mesa.listarMesas();
                 break;
             case(2):
                 System.out.println("Estoque");
                 break;
             case(3):
                 System.out.println("Delivery");
+                mesa.listarMesasDelivery();
                 break;
             case(4):
                 System.out.println("Funcionários");
+                listarFuncionarios();
                 break;
         }
 
