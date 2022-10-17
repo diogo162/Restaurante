@@ -2,9 +2,11 @@ package org.example;
 
 import com.sun.istack.NotNull;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+@Entity
 public class ItemComer {
     @Id
     @NotNull
