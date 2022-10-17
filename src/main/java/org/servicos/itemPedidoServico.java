@@ -1,10 +1,12 @@
 package org.servicos;
 
+import org.example.ItemPedido;
+
 public interface itemPedidoServico {
 
-    void adicionarItem();
+    void adicionarItem(int id, int quantidade, ItemPedido item);
 
-    void removerItem();
+    void removerItem(int id);
 
-    void atualizarItem();
+    void atualizarItem(int id);
 }

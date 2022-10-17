@@ -37,7 +37,7 @@ public class clienteImplementar implements clienteServico {
     public void deletarCliente(String cpf, String nome, int telefone_celular) {
         System.out.println("------- DELETE");
         session.beginTransaction();
-        Query query = session.createQuery("DELETE from Pessoa p where p.cpf = :cpf");
+        Query query = session.createQuery("DELETE from Pessoa p WHERE p.cpf = :cpf");
         query.setParameter("cpf", cpf);
         query.executeUpdate();
         session.getTransaction().commit();
