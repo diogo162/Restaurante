@@ -12,7 +12,11 @@ import com.sun.istack.NotNull;
 import javax.persistence.OneToMany;
 import java.util.List;
 
+
+@Entity
 public class ItemPedido {
+    @Id
+    private int id;
     @NotNull
     private int quantidade;
     @NotNull
