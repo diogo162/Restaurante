@@ -6,26 +6,28 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
+
 @Entity
 public class Pedido {
     @Id
     @NotNull
     private int id_pedido;
 
+    @OneToMany(mappedBy = "ItemPedido")
     private List<ItemPedido> itens;
     @NotNull
     private float valor;
 
 
-    @OneToOne
-    @JoinColumn(name = "cliente_id_cliente")
+    @ManyToOne
+    @JoinColumn(name = "id_cliente")
     private Cliente cliente;
     @NotNull
     private LocalDate dataPedido;
     @NotNull
     private String tipo;
     @OneToOne
-    @JoinColumn(name = "mesa_id_mesa")
+    @JoinColumn(name = "id_mesa")
     private Mesa mesa;
 
     public List<ItemPedido> getItens() {

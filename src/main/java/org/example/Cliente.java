@@ -1,10 +1,8 @@
 package org.example;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Query;
+import javax.persistence.*;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -12,7 +10,12 @@ import org.hibernate.SessionFactory;
 public class Cliente extends Pessoa{
     @Id
     @GeneratedValue
+
     private int id_cliente;
+
+    @OneToOne
+    @JoinColumn(name="id_pedido")
+    private Pedido id_pedido;
 
     public Cliente() {
         super();

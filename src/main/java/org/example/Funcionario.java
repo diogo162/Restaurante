@@ -17,4 +17,9 @@ public class Funcionario extends Pessoa{
     public Funcionario() {
         super();
     }
+
+    @Override
+    public void setNome(String nome) {
+        super.setNome(nome);
+    }
 }

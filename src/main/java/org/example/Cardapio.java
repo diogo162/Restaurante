@@ -11,11 +11,14 @@ import java.util.List;
 public class Cardapio {
     @Id
     private int id;
-    @OneToMany
-    private Set<ItemComer> itemCardapio;
 
-    public Cardapio(ItemComer itemCardapio) {
-        this.itemCardapio = itemCardapio;
+    private List<ItemComer> itemCardapio;
+
+    public void adicionarCardapio(Cardapio cardapio, ItemComer itemCardapio) {
+        cardapio.add(itemCardapio);
+    }
+
+    private void add(ItemComer itemCardapio) {
     }
 
     public Cardapio() {

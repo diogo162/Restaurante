@@ -1,7 +1,9 @@
 package org.servicos;
 
 
+import org.example.Cliente;
 import org.example.HibernateUtil;
+import org.example.Mesa;
 import org.example.Pedido;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,11 +20,12 @@ public class pedidoImplementar implements pedidoServico {
 
 
     @Override
-    public void criarPedido(String cpf, String nome, int telefone_celular){
+    public void criarPedido(Pedido pedido){
         session.beginTransaction();
         session.save( new Pedido());
         session.getTransaction().commit();
     }
+
 
 
 
@@ -37,7 +40,7 @@ public class pedidoImplementar implements pedidoServico {
 
 
     @Override
-    public void deletarPedido(Pedido id_pedido, String cpf, String nome, int telefone_celular) {
+    public void deletarPedido(Pedido id_pedido) {
         System.out.println("------- DELETE");
         session.beginTransaction();
         Query query = session.createQuery("DELETE from Pedido p where p.id_pedido = :id_pedido");

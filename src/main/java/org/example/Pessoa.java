@@ -4,7 +4,7 @@ import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 
-@Entity
+@MappedSuperclass
 public class Pessoa {
     @NotNull
     private String nome;
@@ -12,8 +12,9 @@ public class Pessoa {
     @NotNull
     private String cpf;
     private int telefone_celular;
+
     @NotNull
-    private String endereco;
+    private Endereco endereco;
 
 
 
@@ -46,8 +47,18 @@ public class Pessoa {
     public String getNome() {
         return nome;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+
+
+    protected void setNome(String nome) {
+    }
+
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
 }
