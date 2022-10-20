@@ -6,10 +6,7 @@ import org.example.Pedido;
 import org.hibernate.service.Service;
 
 public interface pedidoServico{
-
-
     void criarPedido(Pedido pedido);
-
 
     void listarPedidos();
 

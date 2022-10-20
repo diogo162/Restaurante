@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 
 @Entity
 public class Cliente extends Pessoa{
-    @Id
+    @EmbeddedId
     @GeneratedValue
 
     private int id_cliente;
@@ -16,6 +16,8 @@ public class Cliente extends Pessoa{
     @OneToOne
     @JoinColumn(name="id_pedido")
     private Pedido id_pedido;
+
+
 
     public Cliente() {
         super();

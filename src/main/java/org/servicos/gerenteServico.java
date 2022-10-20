@@ -13,4 +13,11 @@ public interface gerenteServico {
     void verificarSenha(String senha);
 
     void logar();
+
+    void criarCardapio();
+
+    void atualizarCardapio();
+
+    void listarCardapio();
+
 }

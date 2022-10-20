@@ -8,12 +8,13 @@ import javax.persistence.*;
 public class Pessoa {
     @NotNull
     private String nome;
-    @Id
+    @EmbeddedId
     @NotNull
     private String cpf;
     private int telefone_celular;
 
     @NotNull
+    @Embedded
     private Endereco endereco;
 
 

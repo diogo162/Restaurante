@@ -42,6 +42,16 @@ public class gerenteImplementar implements gerenteServico{
         for ( Funcionario funcionario : (List<Funcionario>) result ) {
             System.out.println( funcionario.getCpf() + " - " + funcionario.getNome() + " - " + funcionario.getTelefone_celular());
         }
+        System.out.println("O que deseja fazer?\n1)mudar salário\n2)demitir funcionário\n3)voltar");
+        Scanner resposta = new Scanner(System.in);
+        switch(resposta){
+            case(1):
+                break;
+            case(2):
+                break;
+            case(3):
+                break;
+        }
     }
 
 
