@@ -44,14 +44,14 @@ public class gerenteImplementar implements gerenteServico{
         }
         System.out.println("O que deseja fazer?\n1)mudar salário\n2)demitir funcionário\n3)voltar");
         Scanner resposta = new Scanner(System.in);
-        switch(resposta){
-            case(1):
-                break;
-            case(2):
-                break;
-            case(3):
-                break;
-        }
+//        switch(resposta){
+//            case(1):
+//                break;
+//            case(2):
+//                break;
+//            case(3):
+//                break;
+//        }
     }
 
 

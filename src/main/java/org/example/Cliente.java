@@ -3,19 +3,17 @@ package org.example;
 
 import javax.persistence.*;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 
 @Entity
 public class Cliente extends Pessoa{
-    @EmbeddedId
-    @GeneratedValue
+//    @Id
+//    @GeneratedValue
+//
+//    private int id_cliente;
 
-    private int id_cliente;
-
-    @OneToOne
+    @OneToMany
     @JoinColumn(name="id_pedido")
-    private Pedido id_pedido;
+    private Pedido pedido;
 
 
 

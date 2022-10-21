@@ -13,13 +13,13 @@ public class Pedido {
     @NotNull
     private int id_pedido;
 
-    @OneToMany(mappedBy = "ItemPedido")
+    @OneToMany(mappedBy = "id_pedido")
     private List<ItemPedido> itens;
     @NotNull
     private float valor;
 
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
     @NotNull

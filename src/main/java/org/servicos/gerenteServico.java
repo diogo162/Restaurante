@@ -14,10 +14,4 @@ public interface gerenteServico {
 
     void logar();
 
-    void criarCardapio();
-
-    void atualizarCardapio();
-
-    void listarCardapio();
-
 }

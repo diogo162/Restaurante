@@ -19,9 +19,7 @@ public class ItemPedido {
     private int quantidade;
     @NotNull
     @OneToMany
+    @JoinColumn(name="id_pedido")
     private List<ItemComer> item;
-    @ManyToOne
-    @JoinColumn(name="Cardapio")
-    private Cardapio cardapio;
 
 }

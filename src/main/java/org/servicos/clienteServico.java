@@ -7,7 +7,7 @@ public interface clienteServico {
 
     void listarClientes();
 
-    public void deletarCliente(String cpf, String nome, int telefone_celular);
+    public void deletarCliente(String cpf);
 
     public Cliente criarCliente(Cliente cliente);
 
