@@ -22,4 +22,20 @@ public class Funcionario extends Pessoa{
     public void setNome(String nome) {
         super.setNome(nome);
     }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
+    }
 }

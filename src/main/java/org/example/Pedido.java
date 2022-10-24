@@ -13,20 +13,29 @@ public class Pedido {
     @NotNull
     private int id_pedido;
 
-    @OneToMany(mappedBy = "id_pedido")
+    @OneToMany
+    @JoinColumn(name = "id_pedido")
     private List<ItemPedido> itens;
     @NotNull
     private float valor;
 
+    //@ManyToOne
+    //@JoinColumn(name = "cpf")
+    //private Cliente cliente;
 
-    @ManyToOne
-    @JoinColumn(name = "id_cliente")
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumns({
+            @JoinColumn(name = "tipo", insertable = false, updatable = false),
+            @JoinColumn(name = "id_pedido", insertable = false, updatable = false),
+            @JoinColumn(name = "valor", insertable = false, updatable = false),
+            @JoinColumn(name = "dataPedido", insertable = false, updatable = false)
+    })
     private Cliente cliente;
     @NotNull
     private LocalDate dataPedido;
     @NotNull
     private String tipo;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_mesa")
     private Mesa mesa;
 
@@ -77,5 +86,13 @@ public class Pedido {
 
     public void setMesa(Mesa mesa) {
         this.mesa = mesa;
+    }
+
+    public int getId_pedido() {
+        return id_pedido;
+    }
+
+    public void setId_pedido(int id_pedido) {
+        this.id_pedido = id_pedido;
     }
 }

@@ -13,9 +13,9 @@
     <session-factory>
         <!-- Database connection settings -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/teste</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/Restaurant</property>
         <property name="connection.username">postgres</property>
-        <property name="connection.password">1597536d</property>
+        <property name="connection.password">666333yy</property>
 
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
@@ -27,12 +27,15 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Annotated entity classes -->
-        <mapping class="org.example.Cardapio"/>
         <mapping class="org.example.Gerente"/>
         <mapping class="org.example.Cliente"/>
+        <mapping class="org.example.Entregador"/>
         <mapping class="org.example.Funcionario"/>
+        <mapping class="org.example.Endereco"/>
         <mapping class="org.example.Mesa"/>
+        <mapping class="org.example.Ingrediente"/>
         <mapping class="org.example.ItemComer"/>
+        <mapping class="org.example.ItemPedido"/>
         <mapping class="org.example.Pedido"/>
 
     </session-factory>

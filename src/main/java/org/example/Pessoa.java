@@ -14,8 +14,7 @@ public class Pessoa {
     private int telefone_celular;
 
     @NotNull
-    @Embedded
-    private Endereco endereco;
+    private String endereco;
 
 
 
@@ -54,11 +53,11 @@ public class Pessoa {
     }
 
 
-    public Endereco getEndereco() {
+    public String getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(Endereco endereco) {
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 

@@ -5,16 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbe04605-14d5-49bc-a94d-710f57e171ea" name="Changes" comment="to ficando louco">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cardapio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cardapio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cardapio.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entregador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entregador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ingrediente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Ingrediente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ItemComer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ItemComer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ItemPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ItemPedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovimentacaoEstoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MovimentacaoEstoque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/clienteImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/clienteImplementar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/clienteServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/clienteServico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteImplementar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteServico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <list id="c8f2a145-f96e-47c8-8dd3-212462636148" name="Changes by Yuri Tabosa" comment="Changes by Yuri Tabosa" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +183,7 @@
       <workItem from="1666228369613" duration="2896000" />
       <workItem from="1666292220648" duration="4241000" />
       <workItem from="1666307007122" duration="1651000" />
+      <workItem from="1666557098104" duration="14515000" />
     </task>
     <task id="LOCAL-00001" summary="Versão base do código com as classes de restaurante">
       <created>1664815456843</created>
@@ -274,5 +280,24 @@
     <MESSAGE value="teste" />
     <MESSAGE value="to ficando louco" />
     <option name="LAST_COMMIT_MESSAGE" value="to ficando louco" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.AnnotationException" package="org.hibernate" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="referencedEntity" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
