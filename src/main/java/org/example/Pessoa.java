@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Pessoa {
     @NotNull
     private String nome;
-    @EmbeddedId
+    @Id
     @NotNull
     private String cpf;
     private int telefone_celular;

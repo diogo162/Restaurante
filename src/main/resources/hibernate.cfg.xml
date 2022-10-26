@@ -13,9 +13,9 @@
     <session-factory>
         <!-- Database connection settings -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/Restaurant</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/teste</property>
         <property name="connection.username">postgres</property>
-        <property name="connection.password">666333yy</property>
+        <property name="connection.password">1597536d</property>
 
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
@@ -37,6 +37,8 @@
         <mapping class="org.example.ItemComer"/>
         <mapping class="org.example.ItemPedido"/>
         <mapping class="org.example.Pedido"/>
+        <mapping class="org.example.Pessoa"/>
+
 
     </session-factory>
 </hibernate-configuration>

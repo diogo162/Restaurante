@@ -2,16 +2,18 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 
-import org.example.Funcionario;
+import org.example.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 
 import org.example.HibernateUtil;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.Query;
+
 
 
 
@@ -33,7 +35,7 @@ public class TesteFuncionario {
 
 
     @Test
-    public void testaFuncionario{
+    public void testaFuncionario(String nome, String cpf){
         em.getTransaction().begin();
 
         Funcionario f1 = new Funcionario();

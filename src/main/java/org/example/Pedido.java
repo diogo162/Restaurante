@@ -25,10 +25,7 @@ public class Pedido {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumns({
-            @JoinColumn(name = "tipo", insertable = false, updatable = false),
-            @JoinColumn(name = "id_pedido", insertable = false, updatable = false),
-            @JoinColumn(name = "valor", insertable = false, updatable = false),
-            @JoinColumn(name = "dataPedido", insertable = false, updatable = false)
+            @JoinColumn(name = "cpf")
     })
     private Cliente cliente;
     @NotNull
