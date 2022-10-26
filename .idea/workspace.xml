@@ -7,10 +7,8 @@
     <list default="true" id="bbe04605-14d5-49bc-a94d-710f57e171ea" name="Changes" comment="to ficando louco">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testeFuncionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TesteFuncionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteImplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/mesaImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/mesaImplementar.java" afterDir="false" />
     </list>
     <list id="c8f2a145-f96e-47c8-8dd3-212462636148" name="Changes by Yuri Tabosa" comment="Changes by Yuri Tabosa" />
     <option name="SHOW_DIALOG" value="false" />

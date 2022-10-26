@@ -80,24 +80,29 @@ public class gerenteImplementar implements gerenteServico{
     public void logar() {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.print("Escolha a função:\n1)Mesas\n2)Estoque\n3)Delivery\n4)Funcionários");
+        System.out.print("Escolha a função:\n1)Mesas\n2)Estoque\n3)Delivery\n4)Funcionários\n5)Sair");
         int escolha = leitor.nextInt();
-        switch(escolha){
-            case(1):
-                System.out.println("Mesas");
-                mesa.listarMesas();
-                break;
-            case(2):
-                System.out.println("Estoque");
-                break;
-            case(3):
-                System.out.println("Delivery");
-                mesa.listarMesasDelivery();
-                break;
-            case(4):
-                System.out.println("Funcionários");
-                listarFuncionarios();
-                break;
+        while(escolha != 5) {
+            switch (escolha) {
+                case (1):
+                    System.out.println("Mesas");
+                    mesa.listarMesas();
+                    break;
+                case (2):
+                    System.out.println("Estoque");
+                    break;
+                case (3):
+                    System.out.println("Delivery");
+                    mesa.listarMesasDelivery();
+                    break;
+                case (4):
+                    System.out.println("Funcionários");
+                    listarFuncionarios();
+                    break;
+                case (5):
+                    System.out.println("sair");
+                    break;
+            }
         }
 
     }
