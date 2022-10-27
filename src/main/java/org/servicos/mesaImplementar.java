@@ -77,10 +77,7 @@ public class mesaImplementar implements mesaServico{
         }
     }
 
-    @Override
-    public void listarMesasDelivery() {
 
-    }
 
     private void gerenciarMesa(int table, int escolha) {
         escolha = 4;

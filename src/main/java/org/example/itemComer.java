@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class ItemComer {
+public class itemComer {
     @Id
     @NotNull
     private int id_item;

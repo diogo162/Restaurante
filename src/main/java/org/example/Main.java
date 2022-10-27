@@ -21,9 +21,10 @@ public class Main {
         itemPedidoServico item = new itemPedidoImplementar();
         clienteServico clientes = new clienteImplementar();
         ArrayList<Float> carrinho = new ArrayList<>();
-        ArrayList<ItemComer> carrinhoItemComer = new ArrayList<>();
-        ArrayList<ItemPedido> carrinhoItemPedido = new ArrayList<>();
-        ItemPedido itemP = new ItemPedido();
+        ArrayList<itemComer> carrinhoItemComer = new ArrayList<>();
+        ArrayList<itemPedido> carrinhoItemPedido = new ArrayList<>();
+        itemComerServico itemC = new itemComerImplementar();
+        itemPedido itemP = new itemPedido();
         Boolean pedindo = true;
         LocalDate localDate = LocalDate.now();
         System.out.println("Bem-vindo, digite sua senha");
@@ -32,7 +33,7 @@ public class Main {
 
         if (!gerente.verificarSenha(gerenteSenha)) {
             Scanner leitor = new Scanner(System.in);
-            System.out.print("Escolha a função:\n1)Mesas\n2)Delivery\n3)Funcionários\n4)Ver cardápio\n5)criar pedido\n6)Sair");
+            System.out.print("Escolha a função:\n1)Mesas\n2)Funcionários\n3)Ver cardápio\n4)criar pedido\n5)Sair");
             int escolha = leitor.nextInt();
             while (escolha != 6) {
                 switch (escolha) {
@@ -43,32 +44,26 @@ public class Main {
                         escolha = leitor.nextInt();
                         break;
                     case (2):
-                        System.out.println("Delivery?");
-                        mesa.listarMesasDelivery();
-                        System.out.print("Escolha a função:\n1)Mesas\n2)Estoque\n3)Delivery\n4)Funcionários\n5)Ver cardápio\n6)Sair");
-                        escolha = leitor.nextInt();
-                        break;
-                    case (3):
                         System.out.println("Funcionários:");
                         gerente.listarFuncionarios();
                         System.out.print("Escolha a função:\n1)Mesas\n2)Estoque\n3)Delivery\n4)Funcionários\n5)Ver cardápio\n6)Sair");
                         escolha = leitor.nextInt();
                         break;
 
-                    case (4):
-                        item.listarCardapio();
+                    case (3):
+                        itemC.listarCardapio();
                         escolha = leitor.nextInt();
                         System.out.print("Escolha a função:\n1)Mesas\n2)Estoque\n3)Delivery\n4)Funcionários\n5)Ver cardápio\n6)Sair");
                         break;
-                    case (5):
+                    case (4):
                         while (pedindo){
                             System.out.println("Quais itens?");
                             int contador = 0;
                             itemP.setQuantidade(contador);
 
-                            item.listarCardapio();
+                            itemC.listarCardapio();
                             int item_id = leitor.nextInt();
-                            ItemComer iten = session.load(ItemComer.class, item_id);
+                            itemComer iten = session.load(itemComer.class, item_id);
                             carrinho.add(iten.getValor());
                             carrinhoItemComer.add(iten);
                             System.out.println("Deseja inserir mais algo?\n1)Sim\n2)Não");

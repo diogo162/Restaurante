@@ -1,8 +1,8 @@
 package org.servicos;
 
-import org.example.Funcionario;
 import org.example.HibernateUtil;
-import org.example.ItemComer;
+import org.example.itemComer;
+import org.example.itemPedido;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -14,11 +14,19 @@ public class itemComerImplementar implements itemComerServico{
     SessionFactory sessionFactory = hu.getSessionFactory();
     Session session = sessionFactory.openSession();
 
+
+    public void adicionarItem() {
+        session.beginTransaction();
+        session.save( new itemPedido());
+        session.getTransaction().commit();
+    }
+
     @Override
     public void listarCardapio() {
-        List result = session.createQuery( "from ItemComer" ).list();
-        for ( ItemComer Item : (List<ItemComer>) result ) {
-            System.out.println( Item.getId_item() + " - " + Item.getNome() + " - " + Item.getValor() + " - " + Item.getIngrediente());
+        List result = session.createQuery( "from itemComer" ).list();
+        for ( itemComer item : (List<itemComer>) result ) {
+            System.out.println( item.getId_item() + " - " + item.getValor() +" - " + item.getValor() + " - " + item.getIngrediente());
         }
     }
-}
+    }
+

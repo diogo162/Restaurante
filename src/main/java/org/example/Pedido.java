@@ -14,7 +14,7 @@ public class Pedido {
     private Long id;int id_pedido;
     @OneToMany
     @JoinColumn(name = "id_pedido")
-    private List<ItemPedido> itens;
+    private List<itemPedido> itens;
     @NotNull
     private float valor;
 
@@ -35,11 +35,11 @@ public class Pedido {
     @JoinColumn(name = "id_mesa")
     private Mesa mesa;
 
-    public List<ItemPedido> getItens() {
+    public List<itemPedido> getItens() {
         return itens;
     }
 
-    public void setItens(List<ItemPedido> itens) {
+    public void setItens(List<itemPedido> itens) {
         this.itens = itens;
     }
 

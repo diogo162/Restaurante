@@ -2,16 +2,13 @@ package org.example;
 
 import javax.persistence.*;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-
 import com.sun.istack.NotNull;
 
 import java.util.List;
 
 
 @Entity
-public class ItemPedido {
+public class itemPedido {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_itemPedido;
@@ -20,15 +17,15 @@ public class ItemPedido {
     @NotNull
     @OneToMany
     @JoinColumn(name="id_pedido")
-    private List<ItemComer> item;
+    private List<itemComer> item;
 
-    public ItemPedido(int id_itemPedido, int quantidade, List<ItemComer> item) {
+    public itemPedido(int id_itemPedido, int quantidade, List<itemComer> item) {
         this.id_itemPedido = id_itemPedido;
         this.quantidade = quantidade;
         this.item = item;
     }
 
-    public ItemPedido() {
+    public itemPedido() {
     }
 
     public int getId_itemPedido() {
@@ -47,11 +44,11 @@ public class ItemPedido {
         this.quantidade = quantidade;
     }
 
-    public List<ItemComer> getItem() {
+    public List<itemComer> getItem() {
         return item;
     }
 
-    public void setItem(List<ItemComer> item) {
+    public void setItem(List<itemComer> item) {
         this.item = item;
     }
 }

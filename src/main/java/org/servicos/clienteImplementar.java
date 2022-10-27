@@ -1,6 +1,5 @@
 package org.servicos;
 
-import org.example.Endereco;
 import org.example.HibernateUtil;
 import org.example.Pessoa;
 import org.hibernate.Session;
@@ -21,11 +20,6 @@ public class clienteImplementar implements clienteServico {
         session.beginTransaction();
         session.save(new Pessoa(cpf, nome, telefone_celular, endereco));
         session.getTransaction().commit();
-    }
-
-    @Override
-    public void criarCliente(String cpf, String nome, int telefone_celular, Endereco endereco) {
-
     }
 
     @Override

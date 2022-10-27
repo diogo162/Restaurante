@@ -31,11 +31,10 @@
         <mapping class="org.example.Cliente"/>
         <mapping class="org.example.Entregador"/>
         <mapping class="org.example.Funcionario"/>
-        <mapping class="org.example.Endereco"/>
         <mapping class="org.example.Mesa"/>
         <mapping class="org.example.Ingrediente"/>
-        <mapping class="org.example.ItemComer"/>
-        <mapping class="org.example.ItemPedido"/>
+        <mapping class="org.example.itemComer"/>
+        <mapping class="org.example.itemPedido"/>
         <mapping class="org.example.Pedido"/>
         <mapping class="org.example.Pessoa"/>
 

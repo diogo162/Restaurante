@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class itemPedidoImplementar implements itemPedidoServico{
 
@@ -13,10 +14,12 @@ public class itemPedidoImplementar implements itemPedidoServico{
     SessionFactory sessionFactory = hu.getSessionFactory();
     Session session = sessionFactory.openSession();
 
+    Scanner leitor = new Scanner(System.in);
+
     @Override
-    public void adicionarItem(int id, int quantidade, ItemPedido item) {
+    public void adicionarItem(int id, int quantidade, itemPedido item) {
         session.beginTransaction();
-        session.save( new ItemPedido());
+        session.save( new itemPedido());
         session.getTransaction().commit();
     }
 
@@ -42,11 +45,5 @@ public class itemPedidoImplementar implements itemPedidoServico{
         }
     }
 
-    @Override
-    public void listarCardapio() {
-        List result = session.createQuery( "from itemComer" ).list();
-        for ( ItemComer item : (List<ItemComer>) result ) {
-            System.out.println( item.getId_item() + " - " + item.getValor() +" - " + item.getValor() + " - " + item.getIngrediente());
-        }
-    }
+
 }
