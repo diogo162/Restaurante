@@ -18,7 +18,6 @@ public class itemPedidoImplementar implements itemPedidoServico{
         session.beginTransaction();
         session.save( new ItemPedido());
         session.getTransaction().commit();
-
     }
 
 
@@ -40,6 +39,14 @@ public class itemPedidoImplementar implements itemPedidoServico{
                 mes.setStatus("fechada");
                 System.out.println(mes.getStatus());
             }
+        }
+    }
+
+    @Override
+    public void listarCardapio() {
+        List result = session.createQuery( "from itemComer" ).list();
+        for ( ItemComer item : (List<ItemComer>) result ) {
+            System.out.println( item.getId_item() + " - " + item.getValor() +" - " + item.getValor() + " - " + item.getIngrediente());
         }
     }
 }

@@ -10,9 +10,8 @@ import java.util.List;
 @Entity
 public class Pedido {
     @Id
-    @NotNull
-    private int id_pedido;
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;int id_pedido;
     @OneToMany
     @JoinColumn(name = "id_pedido")
     private List<ItemPedido> itens;

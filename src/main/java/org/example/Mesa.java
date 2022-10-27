@@ -2,15 +2,16 @@ package org.example;
 
 import com.sun.istack.NotNull;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Mesa {
+    public Mesa(int id_mesa, String status) {
+        this.id_mesa = id_mesa;
+        this.status = status;
+    }
+
     @Id
-    @NotNull
     private int id_mesa;
     @ManyToOne
     @JoinColumn(name = "order_id_pedido")
@@ -19,6 +20,9 @@ public class Mesa {
 
 
     private String status;
+
+    public Mesa() {
+    }
 
 
     public Pedido getOrder() {

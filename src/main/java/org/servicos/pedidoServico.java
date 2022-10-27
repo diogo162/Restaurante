@@ -8,7 +8,13 @@ import org.hibernate.service.Service;
 public interface pedidoServico{
     void criarPedido(Pedido pedido);
 
+
+    void associarMesa(int table, Pedido pedido);
+
     void listarPedidos();
 
-    void deletarPedido(Pedido pedido);
+    void listarPedidosDelivery();
+
+    void deletarPedido(int id);
+
 }

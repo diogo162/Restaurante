@@ -1,7 +1,6 @@
 package org.servicos;
 
 
-import org.example.Cliente;
 import org.example.HibernateUtil;
 import org.example.Mesa;
 import org.example.Pedido;
@@ -18,7 +17,6 @@ public class pedidoImplementar implements pedidoServico {
     SessionFactory sessionFactory = hu.getSessionFactory();
     Session session = sessionFactory.openSession();
 
-
     @Override
     public void criarPedido(Pedido pedido){
         session.beginTransaction();
@@ -30,6 +28,14 @@ public class pedidoImplementar implements pedidoServico {
 
 
     @Override
+    public void associarMesa(int table, Pedido pedido){
+        Mesa mesa = new Mesa();
+        mesa.setId_mesa(table);
+        mesa.setStatus("fechada");
+        mesa.setOrder(pedido);
+    }
+
+    @Override
     public void listarPedidos() {
         //busca todos os dados na base
         List result = session.createQuery( "from Pedido" ).list();
@@ -38,9 +44,18 @@ public class pedidoImplementar implements pedidoServico {
         }
     }
 
+    @Override
+    public void listarPedidosDelivery() {
+        //busca todos os dados na base
+        List result = session.createQuery( "from Pedido where tipo = pedido" ).list();
+        for ( Pedido pedido : (List<Pedido>) result ) {
+            System.out.println( pedido.getItens() + " - " + pedido.getValor() + " - " + pedido.getCliente() + pedido.getDataPedido()+ pedido.getTipo() + pedido.getTipo());
+        }
+    }
+
 
     @Override
-    public void deletarPedido(Pedido id_pedido) {
+    public void deletarPedido(int id_pedido) {
         System.out.println("------- DELETE");
         session.beginTransaction();
         Query query = session.createQuery("DELETE from Pedido p where p.id_pedido = :id_pedido");

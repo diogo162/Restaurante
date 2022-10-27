@@ -1,6 +1,6 @@
 package org.servicos;
 
-import org.example.Cliente;
+import org.example.Endereco;
 import org.example.HibernateUtil;
 import org.example.Pessoa;
 import org.hibernate.Session;
@@ -17,22 +17,25 @@ public class clienteImplementar implements clienteServico {
 
 
     @Override
-    public void criarCliente(String cpf, String nome, int telefone_celular){
+    public void criarCliente(String cpf, String nome, int telefone_celular, String endereco) {
         session.beginTransaction();
-        session.save( new Pessoa(cpf, nome, telefone_celular));
+        session.save(new Pessoa(cpf, nome, telefone_celular, endereco));
         session.getTransaction().commit();
     }
 
     @Override
-    public void listarClientes()
-    {
-        //busca todos os dados na base
-        List result = session.createQuery( "from Pessoa" ).list();
-        for ( Pessoa pessoa : (List<Pessoa>) result ) {
-            System.out.println( pessoa.getCpf() + " - " + pessoa.getCpf() + " - " + pessoa.getNome());
-        }
+    public void criarCliente(String cpf, String nome, int telefone_celular, Endereco endereco) {
+
     }
 
+    @Override
+    public void listarClientes() {
+        //busca todos os dados na base
+        List result = session.createQuery("from Pessoa").list();
+        for (Pessoa pessoa : (List<Pessoa>) result) {
+            System.out.println(pessoa.getCpf() + " - " + pessoa.getCpf() + " - " + pessoa.getNome());
+        }
+    }
 
 
     @Override
@@ -45,10 +48,5 @@ public class clienteImplementar implements clienteServico {
         session.getTransaction().commit();
         System.out.println("cliente deletado com sucesso");
 
-    }
-
-    @Override
-    public Cliente criarCliente(Cliente cliente) {
-        return null;
     }
 }

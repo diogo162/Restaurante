@@ -16,8 +16,12 @@ public class Entregador extends Funcionario{
     @NotNull
     private float salario_hora;
 
-    public Entregador(String cpf, String nome) {
-        super(cpf, nome);
+    public Entregador(String cpf, String nome, int cnh, String veiculo, float horas, float salario_hora) {
+        super();
+        this.cnh = cnh;
+        this.veiculo = veiculo;
+        this.horas = horas;
+        this.salario_hora = salario_hora;
     }
 
     public Entregador() {

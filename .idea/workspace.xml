@@ -7,10 +7,33 @@
     <list default="true" id="bbe04605-14d5-49bc-a94d-710f57e171ea" name="Changes" comment="to ficando louco">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Gerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ItemPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ItemPedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Mesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Mesa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovimentacaoEstoque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/cardapioServico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/clienteImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/clienteImplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/clienteServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/clienteServico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteImplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/gerenteServico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/itemPedidoImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/itemPedidoImplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/itemPedidoServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/itemPedidoServico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/mesaImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/mesaImplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/pedidoImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/pedidoImplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/pedidoServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/pedidoServico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TesteFuncionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TesteFuncionario.java" afterDir="false" />
     </list>
-    <list id="c8f2a145-f96e-47c8-8dd3-212462636148" name="Changes by Yuri Tabosa" comment="Changes by Yuri Tabosa" />
+    <list id="c72395e5-d7e8-4e11-b17f-340215c0bc3f" name="Changes by fakel" comment="" />
+    <list id="ca634a25-b077-42c1-a63c-14d636d623a2" name="Changes by Yuri Tabosa" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entregador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entregador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/clienteImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/clienteImplementar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/servicos/pedidoImplementar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/servicos/pedidoImplementar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +71,29 @@
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/servicos/pedidoImplementar.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="3" changelist="bbe04605-14d5-49bc-a94d-710f57e171ea" />
+        <range start1="20" end1="21" start2="19" end2="19" changelist="ca634a25-b077-42c1-a63c-14d636d623a2" />
+        <range start1="27" end1="27" start2="25" end2="36" changelist="bbe04605-14d5-49bc-a94d-710f57e171ea" />
+        <range start1="28" end1="31" start2="37" end2="37" changelist="ca634a25-b077-42c1-a63c-14d636d623a2" />
+        <range start1="40" end1="40" start2="46" end2="55" changelist="bbe04605-14d5-49bc-a94d-710f57e171ea" />
+        <range start1="42" end1="43" start2="57" end2="58" changelist="bbe04605-14d5-49bc-a94d-710f57e171ea" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/servicos/clienteImplementar.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="3" changelist="bbe04605-14d5-49bc-a94d-710f57e171ea" />
+        <range start1="19" end1="20" start2="19" end2="20" changelist="ca634a25-b077-42c1-a63c-14d636d623a2" />
+        <range start1="21" end1="22" start2="21" end2="22" changelist="ca634a25-b077-42c1-a63c-14d636d623a2" />
+        <range start1="26" end1="28" start2="26" end2="32" changelist="ca634a25-b077-42c1-a63c-14d636d623a2" />
+        <range start1="29" end1="32" start2="33" end2="36" changelist="ca634a25-b077-42c1-a63c-14d636d623a2" />
+        <range start1="36" end1="37" start2="40" end2="40" changelist="ca634a25-b077-42c1-a63c-14d636d623a2" />
+        <range start1="48" end1="55" start2="51" end2="52" changelist="bbe04605-14d5-49bc-a94d-710f57e171ea" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

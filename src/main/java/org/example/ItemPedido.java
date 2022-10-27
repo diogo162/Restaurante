@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 public class ItemPedido {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_itemPedido;
     @NotNull
     private int quantidade;
@@ -21,6 +21,15 @@ public class ItemPedido {
     @OneToMany
     @JoinColumn(name="id_pedido")
     private List<ItemComer> item;
+
+    public ItemPedido(int id_itemPedido, int quantidade, List<ItemComer> item) {
+        this.id_itemPedido = id_itemPedido;
+        this.quantidade = quantidade;
+        this.item = item;
+    }
+
+    public ItemPedido() {
+    }
 
     public int getId_itemPedido() {
         return id_itemPedido;

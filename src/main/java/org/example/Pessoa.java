@@ -7,22 +7,21 @@ import javax.persistence.*;
 @MappedSuperclass
 public class Pessoa {
     @NotNull
-    private String nome;
+    protected String nome;
     @Id
     @NotNull
-    private String cpf;
-    private int telefone_celular;
+    protected String cpf;
+    protected int telefone_celular;
 
     @NotNull
-    private String endereco;
+    protected String endereco;
 
-
-
-    public Pessoa(String cpf, String nome, int telefone_celular) {
+    public Pessoa(String cpf, String nome, int telefone_celular, String endereco) {
         super();
         this.cpf = cpf;
         this.nome = nome;
         this.telefone_celular = telefone_celular;
+        this.endereco = endereco;
     }
 
     public Pessoa() {

@@ -9,4 +9,7 @@ public interface itemPedidoServico {
     void removerItem(int id);
 
     void atualizarItem(int id);
+
+
+    void listarCardapio();
 }

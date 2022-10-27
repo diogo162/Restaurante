@@ -16,10 +16,40 @@ public class gerenteImplementar implements gerenteServico{
     Session session = sessionFactory.openSession();
     mesaServico mesa = new mesaImplementar();
 
+    itemComerServico item = new itemComerImplementar();
+
+    Scanner leitor = new Scanner(System.in);
+
     @Override
     public void criarGerente(String cpf, String nome, int telefone_celular, String senha){
         session.beginTransaction();
         session.save( new Gerente());
+        session.getTransaction().commit();
+    }
+
+    @Override
+    public void criarFuncionario(String cpf, String nome, int telefone_celular, float senha){
+        session.beginTransaction();
+        session.save( new Funcionario(cpf, nome, telefone_celular, senha));
+        session.getTransaction().commit();
+    }
+
+    @Override
+    public void removerFuncionario(String cpf){
+        session.beginTransaction();
+        Query query = session.createQuery("DELETE from Funcionario p where p.cpf = :cpf");
+        query.setParameter("cpf", cpf);
+        query.executeUpdate();
+        session.getTransaction().commit();
+        System.out.println("Funcionario deletado com sucesso");
+
+    }
+
+
+    @Override
+    public void criarEntregador(String cpf, String nome, int CNH, String veiculo, float horas, float salario_hora){
+        session.beginTransaction();
+        session.save( new Entregador(cpf, nome,  CNH, veiculo, horas, salario_hora));
         session.getTransaction().commit();
     }
 
@@ -42,16 +72,26 @@ public class gerenteImplementar implements gerenteServico{
         for ( Funcionario funcionario : (List<Funcionario>) result ) {
             System.out.println( funcionario.getCpf() + " - " + funcionario.getNome() + " - " + funcionario.getTelefone_celular());
         }
-        System.out.println("O que deseja fazer?\n1)mudar salário\n2)demitir funcionário\n3)voltar");
-        Scanner resposta = new Scanner(System.in);
-//        switch(resposta){
-//            case(1):
-//                break;
-//            case(2):
-//                break;
-//            case(3):
-//                break;
-//        }
+        System.out.println("O que deseja fazer?\n1)Adicionar um funcionário\n2)demitir funcionário\n3)voltar");
+        int resposta = leitor.nextInt();
+        switch(resposta){
+            case(1):
+                System.out.println("Insira o cpf:\n");
+                String cpf = leitor.nextLine();
+                System.out.println("Insira o nome:\n");
+                String nome = leitor.nextLine();
+                System.out.println("Insira o numero de contato:\n");
+                int contato = leitor.nextInt();
+                System.out.println("Insira o salário:\n");
+                float salario = leitor.nextFloat();
+                criarFuncionario(cpf, nome, contato, salario);
+                break;
+            case(2):
+                System.out.println("Insira o cpf do funcionário a ser demitido:\n");
+                cpf = leitor.nextLine();
+                removerFuncionario(cpf);
+                break;
+        }
     }
 
 
@@ -63,48 +103,17 @@ public class gerenteImplementar implements gerenteServico{
         query.setParameter("cpf", cpf);
         query.executeUpdate();
         session.getTransaction().commit();
-        System.out.println("cliente deletado com sucesso");
-
+        System.out.println("Gerente deletado com sucesso");
     }
 
     @Override
-    public void verificarSenha(String senha){
-        System.out.println("------- DELETE");
-        session.beginTransaction();
-        Query query = session.createQuery("SELECT senha from Gerente p where p.senha = :senha");
-        session.getTransaction().commit();
-        System.out.println("login realizado com sucesso");
-    }
-
-    @Override
-    public void logar() {
-        Scanner leitor = new Scanner(System.in);
-
-        System.out.print("Escolha a função:\n1)Mesas\n2)Estoque\n3)Delivery\n4)Funcionários\n5)Sair");
-        int escolha = leitor.nextInt();
-        while(escolha != 5) {
-            switch (escolha) {
-                case (1):
-                    System.out.println("Mesas");
-                    mesa.listarMesas();
-                    break;
-                case (2):
-                    System.out.println("Estoque");
-                    break;
-                case (3):
-                    System.out.println("Delivery");
-                    mesa.listarMesasDelivery();
-                    break;
-                case (4):
-                    System.out.println("Funcionários");
-                    listarFuncionarios();
-                    break;
-                case (5):
-                    System.out.println("sair");
-                    break;
+    public Boolean verificarSenha(String senha) {
+        List result = session.createQuery("from Gerente").list();
+        for (Gerente gerente : (List<Gerente>) result) {
+            if (senha == gerente.getSenha()) {
+                return true;
             }
         }
-
+        return false;
     }
-
 }
